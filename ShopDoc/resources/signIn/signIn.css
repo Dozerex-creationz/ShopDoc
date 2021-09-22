@@ -1,0 +1,79 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+body {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background: #5e5485;
+}
+form {
+  width: 700px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-flow: nowrap column;
+  color: white;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="number"] {
+  width: 250px;
+  height: 40px;
+  font-weight: 20px;
+  font-size: 100%;
+  border: none;
+  padding: 8px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px grey;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+input[type="radio"] {
+  margin: 30px;
+  width: 30px;
+  height: 30px;
+  transform: translateY(10px);
+}
+input[type="reset"],
+button#sub {
+  width: 10em;
+  height: 50px;
+  color: white;
+  font-weight: 20px;
+  font-size: 150%;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px grey;
+  background: #f2bf16;
+}
+
+span {
+  width: 1000px;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+a {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  color: mediumpurple;
+}
+a:hover {
+  animation: rotate 0.4s linear forwards;
+}
+
+@keyframes rotate {
+  0% {
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

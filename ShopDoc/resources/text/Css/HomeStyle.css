@@ -1,0 +1,28 @@
+.sign,
+.log {
+  width: 40vw;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: grey;
+  font-family: "Lucida Console", "Courier New", monospace;
+}
+#signInButton,
+#logInButton {
+  width: 40vw;
+  height: 60px;
+  color: rgb(255, 255, 255);
+  font-size: 1.5rem;
+  border: none;
+  border-radius: 10px;
+  box-shadow: 2px 2px 3px grey;
+  background: #508333;
+}
+.line {
+  height: 15rem;
+  width: 0px;
+  border: 2.5px solid black;
+  margin: 50px;
+}
