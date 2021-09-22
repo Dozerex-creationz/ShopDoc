@@ -10,12 +10,15 @@ body {
   justify-content: space-around;
   background: #5e5485;
 }
+h1 {
+  text-align: center;
+  font-size: 3rem;
+}
 form {
-  width: 700px;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  flex-flow: nowrap column;
+  flex-flow: wrap row;
   color: white;
   font-family: "Lucida Console", "Courier New", monospace;
 }
@@ -25,6 +28,7 @@ input[type="password"],
 input[type="number"] {
   width: 250px;
   height: 40px;
+  margin: 30px;
   font-weight: 20px;
   font-size: 100%;
   border: none;
@@ -60,6 +64,16 @@ span {
   justify-content: space-around;
 }
 
+div {
+  width: 40vw;
+  padding: 5vw;
+}
+
+.full {
+  width: 100vw;
+  margin: 0px;
+  padding: 0px;
+}
 a {
   position: fixed;
   top: 10px;
@@ -76,4 +90,10 @@ a:hover {
   100% {
     transform: rotate(360deg);
   }
+}
+
+fieldset {
+  padding: 30px;
+  border-radius: 8px;
+  border: 3px solid rgb(45, 19, 160);
 }
