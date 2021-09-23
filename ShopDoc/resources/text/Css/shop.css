@@ -67,8 +67,8 @@
 
 .innerItemContainer h2 {
   text-align: center;
-  color: darkgoldenrod;
-  text-decoration: darksalmon;
+  color: rgb(177, 135, 29);
+  text-decoration: rgb(230, 136, 104);
 }
 
 .item {
