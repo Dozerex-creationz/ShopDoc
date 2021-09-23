@@ -1,0 +1,126 @@
+.tabSwitch {
+  width: 80vw;
+  margin: auto;
+  margin-top: 3rem;
+  height: 5rem;
+  border: 1px goldenrod solid;
+  border-radius: 4%;
+  display: inline-flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row wrap;
+}
+
+.tab {
+  min-width: 7rem;
+  min-height: 1rem;
+  background: chocolate;
+  color: rgb(121, 80, 79);
+  border-radius: 10%;
+  padding: 0.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.tab:hover {
+  box-shadow: 5px 5px 15px rgb(177, 127, 2);
+  cursor: pointer;
+  animation: shake 0.2s linear forwards;
+}
+
+@keyframes shake {
+  0% {
+  }
+  25% {
+    transform: translateX(0.5rem);
+  }
+  4% {
+    transform: translateX(-0.5rem);
+  }
+  60% {
+    transform: translateX(0.5rem);
+  }
+  75% {
+    transform: translateX(-0.5rem);
+  }
+  100% {
+  }
+}
+
+.itemContainer {
+  min-width: 70vw;
+  min-height: 55vh;
+  margin: auto;
+  margin-top: 5rem;
+  border: 3px rgb(133, 103, 27) solid;
+  overflow-y: scroll;
+}
+.innerItemContainer {
+  min-width: 68vw;
+  margin: auto;
+  margin-top: 1vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-flow: column nowrap;
+  padding: 3vw;
+}
+
+.item {
+  min-width: 65vw;
+  height: 25vh;
+  border-radius: 1%;
+  border: 1px solid saddlebrown;
+  display: grid;
+  grid-template-columns: 25% 50% 25%;
+  overflow: hidden;
+  margin-top: 10vh;
+}
+
+.itemImg {
+  height: 25vh;
+  width: 100%;
+}
+
+.itemDesc {
+  text-align: center;
+}
+.itemDesc ul {
+  text-align: left;
+}
+.changeItem {
+  width: 70%;
+  margin: auto;
+  border: 1px silver solid;
+  height: 20%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  color: black;
+  font-size: 200%;
+  margin-top: 9vh;
+}
+
+.changeItem #add,
+.changeItem #remove,
+.changeItem #numberOfItem {
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+
+.changeItem #add:hover,
+.changeItem #remove:hover {
+  color: rgb(246, 248, 246);
+  background: lightgrey;
+}
+
+.stock {
+  width: 2.5vw;
+  height: 2.5vh;
+  border: 3px rgb(3, 201, 3) solid;
+  border-radius: change;
+  text-align: center;
+  line-height: 2.5vh;
+  margin: auto;
+  margin-top: 5vh;
+}
