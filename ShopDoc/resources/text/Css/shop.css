@@ -65,6 +65,12 @@
   padding: 3vw;
 }
 
+.innerItemContainer h2 {
+  text-align: center;
+  color: darkgoldenrod;
+  text-decoration: darksalmon;
+}
+
 .item {
   width: 65vw;
   height: 18vw;
