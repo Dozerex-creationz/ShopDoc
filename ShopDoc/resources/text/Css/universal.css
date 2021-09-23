@@ -3,10 +3,6 @@
   padding: 0px;
 }
 
-/* html,
-body {
-  height: 100%;
-} */
 .hidden {
   display: none;
 }
@@ -29,12 +25,10 @@ body {
   /* favorite flexbox config basically for nav bar and other stuffs of similar requirements */
 }
 body {
-  min-width: 720px;
-  max-width: 100vw;
-  min-height: 100vh;
   display: flex;
   flex-flow: column nowrap;
   justify-content: space-between;
+  overflow-y: auto;
 }
 input[reset],
 button:hover {
@@ -79,29 +73,21 @@ footer .theme-dark {
   color: white;
 }
 
-.box {
-  padding: 20px;
-  margin: 10px;
-  box-shadow: 2px 2px 10px black;
-  border-radius: 4%;
-}
-
 .titleCard {
-  height: 9rem;
+  height: 18vh;
   border: none;
-  font-size: 6rem;
+  font-size: 3rem;
   font-weight: bold;
   text-align: center;
-  line-height: 9rem;
+  line-height: 18vh;
   padding-top: 1rem;
   color: lime;
 }
 nav {
-  padding: 1rem;
-  width: 100vw-1rem;
-  height: 5rem;
+  padding: 1vw;
+  height: 8vh;
   border: none;
-  line-height: 5rem;
+  line-height: 12vh;
 }
 
 nav ul,
@@ -114,10 +100,10 @@ footer ul {
 }
 
 nav ul li {
-  width: 120px;
-  height: 80px;
+  width: 8vw;
+  height: 4vh;
   border-radius: 50% 50% 0% 0%;
-  font-size: 1rem;
+  font-size: 1vw;
   font-weight: bold;
 }
 
@@ -125,8 +111,6 @@ nav ul li a {
   color: lightyellow;
   text-decoration: none;
   text-align: center;
-  width: 120px;
-  height: 80px;
   display: block;
 }
 nav li a:hover {
@@ -165,22 +149,23 @@ nav li a:hover span.hidden {
 }
 
 main {
-  margin: 3rem 0rem 3rem 0rem;
+  margin: auto;
   display: flex;
-  min-width: 90vw;
+  max-width: 90vw;
   justify-content: space-around;
   align-items: center;
   flex-flow: column wrap;
   min-height: 80vh;
 }
 
-footer {
-  height: 100px;
-}
 footer i {
   color: lightgrey;
   font-size: 3rem;
-  margin: 15px;
+  margin: 1vh;
+}
+footer div {
+  text-align: center;
+  background: rgb(42, 51, 40);
 }
 
 footer li :hover {

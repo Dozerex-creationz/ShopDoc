@@ -1,6 +1,6 @@
 .sign,
 .log {
-  width: 40vw;
+  width: 30vw;
   height: auto;
   display: flex;
   align-items: center;
@@ -11,10 +11,9 @@
 }
 #signInButton,
 #logInButton {
-  width: 40vw;
-  height: 60px;
+  width: 15vw;
+  height: 5vw;
   color: rgb(255, 255, 255);
-  font-size: 1.5rem;
   border: none;
   border-radius: 10px;
   box-shadow: 2px 2px 3px grey;

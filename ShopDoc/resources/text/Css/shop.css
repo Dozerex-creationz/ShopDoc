@@ -49,11 +49,10 @@
 
 .itemContainer {
   min-width: 70vw;
-  min-height: 55vh;
+  min-height: 60vw;
   margin: auto;
   margin-top: 5rem;
   border: 3px rgb(133, 103, 27) solid;
-  overflow-y: scroll;
 }
 .innerItemContainer {
   min-width: 68vw;
@@ -67,8 +66,10 @@
 }
 
 .item {
-  min-width: 65vw;
-  height: 25vh;
+  width: 65vw;
+  height: 18vw;
+  min-width: 150px;
+  min-height: 120px;
   border-radius: 1%;
   border: 1px solid saddlebrown;
   display: grid;
@@ -77,27 +78,51 @@
   margin-top: 10vh;
 }
 
-.itemImg {
-  height: 25vh;
-  width: 100%;
+.creams .itemImg {
+  background-image: url(../../images/creams.jfif);
 }
-
+.syrup .itemImg {
+  background-image: url(../../images/syrup.jfif);
+}
+.other .itemImg {
+  background-image: url(../../images/other.jfif);
+}
+.tablets .itemImg {
+  background-image: url(../../images/tablets.jfif);
+}
+.supplements .itemImg {
+  background-image: url(../../images/supplements.jfif);
+}
+.vaccine .itemImg {
+  background-image: url(../../images/vaccine.jfif);
+}
 .itemDesc {
   text-align: center;
+  padding: 3rem;
+  background: lightpink;
 }
-.itemDesc ul {
+.itemDesc h4 {
+  color: rgb(170, 52, 52);
+  font-size: 160%;
+}
+.itemDesc p {
+  padding: 1rem;
   text-align: left;
+}
+
+.itemChange {
+  display: grid;
+  place-items: center;
 }
 .changeItem {
   width: 70%;
   margin: auto;
   border: 1px silver solid;
-  height: 20%;
+  height: 40%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   color: black;
   font-size: 200%;
-  margin-top: 9vh;
 }
 
 .changeItem #add,
@@ -115,12 +140,10 @@
 }
 
 .stock {
-  width: 2.5vw;
-  height: 2.5vh;
+  width: 3rem;
+  height: 3rem;
   border: 3px rgb(3, 201, 3) solid;
   border-radius: change;
   text-align: center;
-  line-height: 2.5vh;
-  margin: auto;
-  margin-top: 5vh;
+  line-height: 3rem;
 }
