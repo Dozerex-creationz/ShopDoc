@@ -1,3 +1,18 @@
+:root {
+  --dark-color0: black;
+  --light-color0: white;
+  --dark-color1: rgb(49, 49, 49);
+  --light-color1: rgb(122, 120, 120);
+  --dark-color2: rgb(42, 51, 40);
+  --light-color2: rgb(168, 165, 165);
+  --purple: rgb(71, 35, 104);
+  --main-heading: rgb(62, 177, 62);
+  --light-yellow: light-yellow;
+  --yellow: rgb(253, 253, 69);
+  --footer-links: rgb(245, 100, 100);
+  --coolBlue: rgb(68, 70, 173);
+}
+
 * {
   margin: 0px;
   padding: 0px;
@@ -18,7 +33,7 @@
 
 .flexRow {
   display: flex;
-  flex-flow: row nowrap;
+  flex-flow: row wrap;
   margin: auto;
   justify-content: space-around;
   align-items: center;
@@ -29,6 +44,8 @@ body {
   flex-flow: column nowrap;
   justify-content: space-between;
   overflow-y: auto;
+  background: var(--light-color0);
+  color: var(--dark-color0);
 }
 input[reset],
 button:hover {
@@ -39,7 +56,7 @@ button:hover {
   0% {
   }
   100% {
-    box-shadow: 5px 5px 20px rgb(66, 65, 65);
+    box-shadow: 5px 5px 20px var(--dark-color1);
   }
 }
 
@@ -52,25 +69,25 @@ header {
 header.theme-light,
 nav.theme-light,
 footer.theme-light {
-  background: rgb(49, 49, 49);
-  color: rgb(148, 144, 144);
+  background: var(--dark-color1);
+  color: var(--light-color1);
 }
 
 header .theme-dark,
 nav .theme-dark,
 footer .theme-dark {
-  background: rgb(42, 51, 40);
-  color: rgb(212, 212, 212);
+  background: var(--dark-color2);
+  color: var(--light-color2);
 }
 
 .theme-light {
-  background: white;
-  color: black;
+  background: var(--light-color0);
+  color: var(--dark-color0);
 }
 
 .theme-transparent {
   background: transparent;
-  color: white;
+  color: var(--light-color0);
 }
 
 .titleCard {
@@ -81,7 +98,7 @@ footer .theme-dark {
   text-align: center;
   line-height: 18vh;
   padding-top: 1rem;
-  color: lime;
+  color: var(--main-heading);
 }
 nav {
   padding: 1vw;
@@ -108,13 +125,13 @@ nav ul li {
 }
 
 nav ul li a {
-  color: lightyellow;
+  color: var(--light-yellow);
   text-decoration: none;
   text-align: center;
   display: block;
 }
 nav li a:hover {
-  color: yellow;
+  color: var(--yellow);
 }
 nav li a:hover i {
   display: none;
@@ -123,6 +140,112 @@ nav li a:hover i {
 nav li a:hover span.hidden {
   animation: showing 0.4s ease-in forwards;
   display: block;
+}
+
+main {
+  margin: auto;
+  display: flex;
+  max-width: 90vw;
+  justify-content: space-around;
+  align-items: center;
+  flex-flow: column wrap;
+  min-height: 80vh;
+}
+
+footer i {
+  color: var(--footer-links);
+  font-size: 3rem;
+  margin: 1vh;
+}
+footer div {
+  text-align: center;
+  background: var(--dark-color1);
+}
+
+footer li :hover {
+  animation: wiggle 0.5s linear forwards;
+}
+
+fieldset {
+  margin: 2rem;
+  width: 50vw;
+  font-size: 1.8rem;
+  border: 5px solid var(--purple);
+  padding: 3rem;
+  display: flex;
+  justify-content: space-around;
+  flex-flow: column nowrap;
+}
+
+fieldset ul {
+  list-style-type: none;
+  width: 100%;
+}
+
+fieldset li a {
+  color: var(--dark-color2);
+  font-size: 2.4rem;
+}
+li a:hover {
+  color: var(--dark-color2);
+}
+legend {
+  font-size: 1rem;
+  animation: move 4s infinite linear both;
+  background: var(--coolBlue);
+  border-radius: 10%;
+  color: var(--light-color0);
+  padding: 0.5%;
+}
+
+legend:hover {
+  animation: blinkTwice 0.4s linear forwards;
+}
+
+@keyframes blinkTwice {
+  0% {
+  }
+  30% {
+    opacity: 0;
+  }
+  45% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+  }
+}
+@keyframes move {
+  0% {
+  }
+  50% {
+    scale: 2x;
+  }
+  100% {
+    scale: 1.5x;
+  }
+}
+
+@keyframes wiggle {
+  0% {
+  }
+  25% {
+    transform: rotate(40deg);
+  }
+  40% {
+    transform: rotate(-40deg);
+  }
+  60% {
+    transform: rotate(40deg);
+  }
+  75% {
+    transform: rotate(-40deg);
+  }
+  100% {
+    color: rgb(72, 85, 160);
+  }
 }
 
 @keyframes showing {
@@ -144,50 +267,6 @@ nav li a:hover span.hidden {
   100% {
     display: block;
     opacity: 1;
-    font-size: 1.2rem;
-  }
-}
-
-main {
-  margin: auto;
-  display: flex;
-  max-width: 90vw;
-  justify-content: space-around;
-  align-items: center;
-  flex-flow: column wrap;
-  min-height: 80vh;
-}
-
-footer i {
-  color: lightgrey;
-  font-size: 3rem;
-  margin: 1vh;
-}
-footer div {
-  text-align: center;
-  background: rgb(42, 51, 40);
-}
-
-footer li :hover {
-  animation: wiggle 0.5s linear forwards;
-}
-
-@keyframes wiggle {
-  0% {
-  }
-  25% {
-    transform: rotate(40deg);
-  }
-  40% {
-    transform: rotate(-40deg);
-  }
-  60% {
-    transform: rotate(40deg);
-  }
-  75% {
-    transform: rotate(-40deg);
-  }
-  100% {
-    color: rgb(72, 85, 160);
+    font-size: 1.1rem;
   }
 }

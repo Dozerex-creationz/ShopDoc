@@ -20,8 +20,8 @@
   background: #508333;
 }
 .line {
-  height: 15rem;
+  height: 30rem;
   width: 0px;
-  border: 2.5px solid black;
+  border: 2.5px solid cyan;
   margin: 50px;
 }

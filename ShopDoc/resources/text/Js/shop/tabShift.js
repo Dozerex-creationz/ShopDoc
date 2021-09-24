@@ -14,7 +14,6 @@ const inner_tabletTab=document.querySelector("#inner-tablet");
 let currentTab="cream";
 let stopper=0;
 let temp="";
-console.log("im hi m");
 const changeTab=(tab,ctab)=>{
     console.log("im called for hiding current tab");
     switch(ctab)

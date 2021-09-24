@@ -1,0 +1,15 @@
+span {
+  width: 100%;
+  margin: 2rem;
+  text-align: left;
+}
+
+span input {
+  float: right;
+  width: 20rem;
+  height: 3rem;
+  border-radius: 3%;
+  background: lightcyan;
+  color: darkslategray;
+  overflow: auto;
+}
