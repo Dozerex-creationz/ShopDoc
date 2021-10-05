@@ -9,7 +9,7 @@ span button {
   text-align: center;
   width: 20em;
 }
-span {
+span.setting {
   width: 100%;
   height: 7vh;
   margin: 1rem;

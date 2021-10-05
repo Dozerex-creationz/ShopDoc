@@ -131,6 +131,7 @@ nav ul li a {
   text-decoration: none;
   text-align: center;
   display: block;
+  width: 100%;
   height: 8vh;
   line-height: 4vh;
 }
@@ -139,10 +140,16 @@ nav li a:hover {
   line-height: 4vh;
 }
 nav li a:hover i {
+  width: 100%;
+  height: 100%;
+  animation: wane 0.2s linear both;
+
   display: none;
+  opacity: 0;
 }
 span.navtag {
-  height: 4vh;
+  position: relative;
+  /* add any properties if required for the navbars hidden content */
 }
 nav li a:hover span.hidden {
   animation: showing 0.4s ease-in forwards;
@@ -240,16 +247,16 @@ legend:hover {
   0% {
   }
   25% {
-    transform: rotate(40deg);
+    transform: rotate(30deg);
   }
   40% {
-    transform: rotate(-40deg);
+    transform: rotate(-30deg);
   }
   60% {
-    transform: rotate(40deg);
+    transform: rotate(30deg);
   }
   75% {
-    transform: rotate(-40deg);
+    transform: rotate(-30deg);
   }
   100% {
     color: rgb(72, 85, 160);
@@ -276,5 +283,14 @@ legend:hover {
     display: block;
     opacity: 1;
     font-size: 1.1rem;
+  }
+}
+
+@keyframes wane {
+  0% {
+  }
+  100% {
+    display: none;
+    opacity: 0;
   }
 }
