@@ -132,9 +132,11 @@ nav ul li a {
   text-align: center;
   display: block;
   height: 8vh;
+  line-height: 4vh;
 }
 nav li a:hover {
   color: var(--yellow);
+  line-height: 4vh;
 }
 nav li a:hover i {
   display: none;
