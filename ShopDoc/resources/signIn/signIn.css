@@ -43,8 +43,7 @@ input[type="radio"] {
   height: 30px;
   transform: translateY(10px);
 }
-input[type="reset"],
-button#sub {
+.finalButton input {
   width: 10em;
   height: 50px;
   color: white;
@@ -55,7 +54,9 @@ button#sub {
   box-shadow: 2px 2px 3px grey;
   background: #f2bf16;
 }
-
+.finalButton input :hover {
+  cursor: pointer;
+}
 span {
   width: 1000px;
   height: 300px;
