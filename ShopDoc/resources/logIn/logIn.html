@@ -1,31 +1,43 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
+  <head>
+    <title></title>
 
-<title></title>
-
-<link rel='stylesheet' href='../text/universal.css'>
-<link rel='stylesheet' href='logIn.css'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-14/css/all.min.css" integrity="sha512-YVm6dLGBSj6KG3uUb1L5m25JXXYrd9yQ1P7RKDSstzYiPxI2vYLCCGyfrlXw3YcN/EM3UJ/IAqsCmfdc6pk/Tg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-<div>
-
-
-<form>
-<h1 STYLE="MARGIN:20PX;COLOR:#f2bf16;">Log IN ..</h1>
-<label name="name" value="Name"><h3>Name:</h3><br><input type="text" id="name" placeholder="enter your name..."></label>
-<br><br>
-<label name="pass" value="Password"><h3>Password:</h3><br><input type="password" id="pass" placeholder="sshhhh! izza secret!..."></label>
-<br><br>
-<div class='but'>
-<input type="reset" value="Reset">
-<input type="submit" value="Let's fly In!">
-</div>
-</form>
-</div>
-<a href="../../index.html" class="back"><i class="fas fa-arrow-circle-left fa-5x"></i></a>
-<script src="logIn.js"></script>
-</body>
-
+    <link rel="stylesheet" href="logIn.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-14/css/all.min.css"
+      integrity="sha512-YVm6dLGBSj6KG3uUb1L5m25JXXYrd9yQ1P7RKDSstzYiPxI2vYLCCGyfrlXw3YcN/EM3UJ/IAqsCmfdc6pk/Tg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div>
+      <form action="logInto.php" method="POST">
+        <h1 style="margin: 20px; color: #f2bf16">Log IN ..</h1>
+        <label for="name" value="Name"
+          ><h3>Name:</h3>
+          <br /><input type="text" name="name" placeholder="enter your name..."
+        /></label>
+        <br /><br />
+        <label for="pass" value="Password"
+          ><h3>Password:</h3>
+          <br /><input
+            type="password"
+            name="pass"
+            placeholder="sshhhh! izza secret!..."
+        /></label>
+        <br /><br />
+        <div class="but">
+          <input type="reset" value="Reset" />
+          <input type="submit" value="Let's fly In!" />
+        </div>
+      </form>
+    </div>
+    <a href="../../index.html" class="back"
+      ><i class="fas fa-arrow-circle-left fa-5x"></i
+    ></a>
+    <script src="logIn.js"></script>
+  </body>
 </html>
