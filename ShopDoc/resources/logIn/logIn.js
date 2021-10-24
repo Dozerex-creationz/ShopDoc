@@ -36,7 +36,6 @@ alert('Congrats you are in!');
 else
 {
 alert('wrong password!');
-
 }
 }
 

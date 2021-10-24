@@ -1,4 +1,6 @@
 <?php
+$con=mysqli_connect("Shopdoc","root","","shopdoc");
+
 
 $name=$_POST["name"];
 $pass=$_POST["pass"];
@@ -10,6 +12,11 @@ $bday=$_POST["bday"];
 $address=$_POST["ad1"]." -|- ".$_POST["ad2"]." -|- ".$_POST["city"]." -|- ".$_POST["state"]." -|- ".$_POST["cou"];
 
 
-echo "<br><br>".$name."<br><br>".$pass."<br><br>".$age."<br><br>".$work."<br><br>".$gen."<br><br>".$bday."<br><br>".$address;
-
+$insertQuery = "INSERT INTO entry_log (User_Name,Password,Age,Work,Gender,Address,DOB) VALUES ('$name','$pass','$age','$work','$gen','$address','$bday')";
+if(mysqli_query($con,$insertQuery)){
+    echo "added";
+}
+else{
+    echo "error". mysqli_error($link);
+}
 ?>
