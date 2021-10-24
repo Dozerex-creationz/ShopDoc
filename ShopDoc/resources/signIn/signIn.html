@@ -1,67 +1,126 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-<head>
+  <head>
+    <title></title>
 
-<title></title>
+    <link rel="stylesheet" href="signIn.css" />
+    <link rel="stylesheet" href="../text/universal.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-14/css/all.min.css"
+      integrity="sha512-YVm6dLGBSj6KG3uUb1L5m25JXXYrd9yQ1P7RKDSstzYiPxI2vYLCCGyfrlXw3YcN/EM3UJ/IAqsCmfdc6pk/Tg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <a href="../../index.html" class="back"
+      ><i class="fas fa-arrow-circle-left fa-5x"></i
+    ></a>
+    <div class="full">
+      <h1 style="margin: 30px; color: #f2bf16">Sign In ...</h1>
+      <form action="signInto.php" method="POST">
+        <div>
+          <fieldset>
+            <legend>Personal Details:</legend>
+            <label for="name" value="Name"
+              ><h3>Name:</h3>
+              <br /><input
+                type="text"
+                name="name"
+                placeholder="enter your name..."
+            /></label>
+            <br /><br />
+            <label for="pass" value="Password"
+              ><h3>Password:</h3>
+              <br /><input
+                type="password"
+                name="pass"
+                placeholder="enter your new password..."
+            /></label>
+            <br /><br />
+            <label for="confpass" value="Confirm Password"
+              ><h3>Confirm Password:</h3>
+              <br /><input
+                type="password"
+                name="confpass"
+                placeholder="enter your password again..."
+            /></label>
+            <br /><br />
+            <label for="age" value="Age"
+              ><h3>Age:</h3>
+              <br /><input
+                type="number"
+                step="1"
+                min="1"
+                max="150"
+                name="age"
+                placeholder="enter your age"
+            /></label>
+            <br /><br />
+            <label for="work" value="work"
+              ><h3>Work:</h3>
+              <br /><input
+                type="text"
+                name="work"
+                placeholder="What's your job bruh?"
+            /></label>
+            <br /><br />
+            <label for="gen" value="gender"
+              ><h3>Gender:</h3>
+              <br /><b>Male</b
+              ><input type="radio" id="gen1" name="gen" value="Male" /><b
+                >Female</b
+              ><input type="radio" name="gen" id="gen2" value="Female"
+            /></label>
+            <br /><br />
+            <label for="bday" value="Birthday"
+              ><h3>Birthday:</h3>
+              <br /><input type="date" name="bday"
+            /></label>
+            <br /><br />
+          </fieldset>
+        </div>
 
-<link rel='stylesheet' href='signIn.css'>
-<link rel='stylesheet' href='../text/universal.css'>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0-14/css/all.min.css" integrity="sha512-YVm6dLGBSj6KG3uUb1L5m25JXXYrd9yQ1P7RKDSstzYiPxI2vYLCCGyfrlXw3YcN/EM3UJ/IAqsCmfdc6pk/Tg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-    <a href="../../index.html" class="back"><i class="fas fa-arrow-circle-left fa-5x"></i></a>
-<div class="full">
-    <h1 style="margin:30px;color:#f2bf16">Sign In ...</h1>
-<form >
-<div>
-    <fieldset><legend>Personal Details:</legend>
-<label name="name" value="Name"><h3>Name:</h3><br><input type="text" id="name" placeholder="enter your name..."></label>
-<br><br>
-<label name="pass" value="Password"><h3>Password:</h3><br><input type="password" id="pass" placeholder="enter your new password..."></label>
-<br><br>
-<label name="confpass" value="Confirm Password"><h3>Confirm Password:</h3><br><input type="password" id="confpass" placeholder="enter your password again..."></label>
-<br><br>
-<label name="age" value="Age"><h3>Age:</h3><br><input type="number" step="1" min="1" max="150" id="age" placeholder="enter your age"></label>
-<br><br>
-<label name="work" value="work"><h3>Work:</h3><br><input type="text" id="work" placeholder="What's your job bruh?"></label>
-<br><br>
-<label name="gen" value="gender"><h3>Gender:</h3><br><b>Male</b><input type="radio" id="gen1" name="gen" value="Male"><b>Female</b><input type="radio" name="gen" id="gen2" value="Female"></label>
-<br><br>
-<label name="bday" value="Birthday"><h3>Birthday:</h3><br><input type="date" id="bday" ></label>
-<br><br>
-</fieldset>
-</div>
+        <div>
+          <fieldset>
+            <legend>Delivery Details:</legend>
+            <label for="ad1" value="Address Line 1:"
+              ><h3>Address Line 1:</h3>
+              <br /><input type="text" name="ad1" placeholder="Address Line 1"
+            /></label>
+            <br /><br />
+            <label for="ad2" value="Address Line 2:"
+              ><h3>Address Line 2:</h3>
+              <br /><input type="text" name="ad2" placeholder="Address Line 2"
+            /></label>
+            <br /><br />
 
+            <label for="city" value="City"
+              ><h3>City:</h3>
+              <br /><input type="text" name="city" placeholder="City?"
+            /></label>
+            <br /><br />
 
-
-
-<div>
-    <fieldset><legend>Delivery Details:</legend>
-<label name="ad1" value="Address Line 1:"><h3>Address Line 1:</h3><br><input type="text" id="ad1" placeholder="Address Line 1"></label>
-<br><br>
-<label name="ad2" value="Address Line 2:"><h3>Address Line 2:</h3><br><input type="text" id="ad2" placeholder="Address Line 2"></label>
-<br><br>
-
-<label name="city" value="City"><h3>City:</h3><br><input type="text" id="city" placeholder="City?"></label>
-<br><br>
-
-<label name="state" value="State:"><h3>State:</h3><br><input type="text" id="state" placeholder="State"></label>
-<br><br>
-<label name="cou" value="Country:"><h3>Country:</h3><br><input type="text" id="cou" placeholder="Country"></label>
-<br><br></fieldset>
-
-</div>
-<br><br>
-<span>
-<input type="reset" value="Reset">
-<button id='sub'>Let's fly In!</button>
-</span>
-
-
-
-</form>
-</div>
-<script src="signIn.js"></script>
-</body>
-
+            <label for="state" value="State:"
+              ><h3>State:</h3>
+              <br /><input type="text" name="state" placeholder="State"
+            /></label>
+            <br /><br />
+            <label for="cou" value="Country:"
+              ><h3>Country:</h3>
+              <br /><input type="text" name="cou" placeholder="Country"
+            /></label>
+            <br /><br />
+          </fieldset>
+        </div>
+        <br /><br />
+        <span>
+          <input type="reset" value="Reset" />
+          <button id="sub">Let's fly In!</button>
+        </span>
+      </form>
+    </div>
+    <script src="signIn.js"></script>
+  </body>
 </html>
