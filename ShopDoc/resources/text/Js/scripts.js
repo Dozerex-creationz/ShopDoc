@@ -1,6 +1,5 @@
 console.log("universal script");
 const root=document.querySelector(":root");
-
 const setTheme=(Theme)=>{
     console.log('hi im setting the theme');
     if(Theme=="d"){

@@ -25,3 +25,17 @@
   border: 2.5px solid cyan;
   margin: 50px;
 }
+
+.user {
+  border-radius: 14%;
+  border: 3px solid rgb(40, 73, 39);
+  width: 40vw;
+}
+
+.nameUser {
+  color: darkolivegreen;
+  text-shadow: 2px;
+  font-size: 2em;
+  text-align: center;
+  margin: 3rem;
+}
