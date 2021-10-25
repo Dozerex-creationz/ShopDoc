@@ -55,7 +55,7 @@
                 <div class="itemChange"> 
                     <div class="changeItem" id="T1">
                         <button class="add">+</button>
-                        <div class="numberOfItem" value="0">0</div>
+                        <div class="numberOfItem">0</div>
                         <button class="remove">-</button>
                     </div>
 
@@ -67,9 +67,9 @@
                 <div class="itemDesc" id=""><h4>Crocin</h4><p>--prescribed generally for cold,fever.</p></div>
                 <div class="itemChange">
                     <div class="changeItem" id="T2">
-                        <button id="add">+</button>
-                        <div id="numberOfItem">0</div>
-                        <button id="remove">-</button>
+                        <button class="add">+</button>
+                        <div class="numberOfItem">0</div>
+                        <button class="remove">-</button>
                     </div>
 
                     <div class="stock" id="">10</div>
@@ -80,9 +80,9 @@
                 <div class="itemDesc" id=""><h4>Paracetemol</h4><p>--prescribed generally for cold and fever, along with crocin</p></div>
                 <div class="itemChange">
                     <div class="changeItem" id="T3">
-                        <button id="add">+</button>
-                        <div id="numberOfItem">0</div>
-                        <button id="remove">-</button>
+                        <button class="add">+</button>
+                        <div class="numberOfItem">0</div>
+                        <button class="remove">-</button>
                     </div>
 
                     <div class="stock" id="">10</div>
@@ -93,9 +93,9 @@
                 <div class="itemDesc" id=""><h4>Gelusil</h4><p>--reduces acidity</p></div>
                 <div class="itemChange">
                     <div class="changeItem" id="T4">
-                        <button id="add">+</button>
-                        <div id="numberOfItem">0</div>
-                        <button id="remove">-</button>
+                        <button class="add">+</button>
+                        <div class="numberOfItem">0</div>
+                        <button class="remove">-</button>
                     </div>
 
                     <div class="stock" id="">10</div>
@@ -106,9 +106,9 @@
                 <div class="itemDesc" id=""><h4>Pentacid</h4><p>--prescribed for peptic ulcer.</p></div>
                 <div class="itemChange">
                     <div class="changeItem" id="T5">
-                        <button id="add">+</button>
-                        <div id="numberOfItem">0</div>
-                        <button id="remove">-</button>
+                        <button class="add">+</button>
+                        <div class="numberOfItem">0</div>
+                        <button class="remove">-</button>
                     </div>
 
                     <div class="stock" id="">10</div>
@@ -123,9 +123,9 @@
                 <div class="itemDesc" id=""><h4>Tinture</h4><p>--used for slight scratches, as an anti-septic</p></div>
                 <div class="itemChange">
                     <div class="changeItem" id="C1">
-                        <button id="add">+</button>
-                        <div id="numberOfItem">0</div>
-                        <button id="remove">-</button>
+                        <button class="add">+</button>
+                        <div class="numberOfItem">0</div>
+                        <button class="remove">-</button>
                     </div>
 
                     <div class="stock" id="">10</div>
@@ -136,11 +136,10 @@
                 <div class="itemDesc" id=""><h4>Calamine</h4><p>--used for skin related uncomfortablilities.</p></div>
                 <div class="itemChange">
                     <div class="changeItem" id="C2">
-                        <button id="add">+</button>
-                        <div id="numberOfItem">0</div>
-                        <button id="remove">-</button>
+                        <button class="add">+</button>
+                        <div class="numberOfItem">0</div>
+                        <button class="remove">-</button>
                     </div>
-
                     <div class="stock" id="">10</div>
                 </div>
             </div>
@@ -149,9 +148,9 @@
                 <div class="itemDesc" id=""><h4>Axe-Brand Oil</h4><p>--Eucalyptus oil, used for head aches.</p></div>
                 <div class="itemChange">
                     <div class="changeItem" id="C3">
-                        <button id="add">+</button>
-                        <div id="numberOfItem">0</div>
-                        <button id="remove">-</button>
+                        <button class="add">+</button>
+                        <div class="numberOfItem">0</div>
+                        <button class="remove">-</button>
                     </div>
 
                     <div class="stock" id="">10</div>
@@ -162,9 +161,9 @@
                 <div class="itemDesc" id=""><h4>Moov</h4><p>--used for Muscle fatigues and internal injuries.</p></div>
                 <div class="itemChange">
                     <div class="changeItem" id="C4">
-                        <button id="add">+</button>
-                        <div id="numberOfItem">0</div>
-                        <button id="remove">-</button>
+                        <button class="add">+</button>
+                        <div class="numberOfItem">0</div>
+                        <button class="remove">-</button>
                     </div>
 
                     <div class="stock" id="">10</div>
@@ -175,9 +174,9 @@
                 <div class="itemDesc" id=""><h4>Iodex</h4><p>--used for Muscle fatigues and internal injuries. </p></div>
                 <div class="itemChange">
                     <div class="changeItem" id="C5">
-                        <button id="add">+</button>
-                        <div id="numberOfItem">0</div>
-                        <button id="remove">-</button>
+                        <button class="add">+</button>
+                        <div class="numberOfItem">0</div>
+                        <button class="remove">-</button>
                     </div>
 
                     <div class="stock" id="">10</div>
@@ -193,9 +192,9 @@
                         <div class="itemDesc" id=""><h4>Benadryll</h4><p>--prescribed generally for dry cough.</p></div>
                         <div class="itemChange">
                             <div class="changeItem" id="S1">
-                                <button id="add">+</button>
-                                <div id="numberOfItem">0</div>
-                                <button id="remove">-</button>
+                                <button class="add">+</button>
+                                <div class="numberOfItem">0</div>
+                                <button class="remove">-</button>
                             </div>
 
                             <div class="stock" id="">10</div>
@@ -206,9 +205,9 @@
                         <div class="itemDesc" id=""><h4>Gelusil-Syrup</h4><p>--reduces acidity</p></div>
                         <div class="itemChange">
                             <div class="changeItem" id="S2">
-                                <button id="add">+</button>
-                                <div id="numberOfItem">0</div>
-                                <button id="remove">-</button>
+                                <button class="add">+</button>
+                                <div class="numberOfItem">0</div>
+                                <button class="remove">-</button>
                             </div>
 
                             <div class="stock" id="">10</div>
@@ -219,9 +218,9 @@
                         <div class="itemDesc" id=""><h4>Triaminic</h4><p>--Vintage medicine for dry cough, orange flavour.</p></div>
                         <div class="itemChange">
                             <div class="changeItem" id="S3">
-                                <button id="add">+</button>
-                                <div id="numberOfItem">0</div>
-                                <button id="remove">-</button>
+                                <button class="add">+</button>
+                                <div class="numberOfItem">0</div>
+                                <button class="remove">-</button>
                             </div>
 
                             <div class="stock" id="">10</div>
@@ -232,9 +231,9 @@
                         <div class="itemDesc" id=""><h4>Dexorange</h4><p>--syrup for haemoglobin count improvement</p></div>
                         <div class="itemChange">
                             <div class="changeItem" id="S4">
-                                <button id="add">+</button>
-                                <div id="numberOfItem">0</div>
-                                <button id="remove">-</button>
+                                <button class="add">+</button>
+                                <div class="numberOfItem">0</div>
+                                <button class="remove">-</button>
                             </div>
 
                             <div class="stock" id="">10</div>
@@ -245,9 +244,9 @@
                         <div class="itemDesc" id=""><h4>Eno</h4><p>--reduces acidity</p></div>
                         <div class="itemChange">
                             <div class="changeItem" id="S5">
-                                <button id="add">+</button>
-                                <div id="numberOfItem">0</div>
-                                <button id="remove">-</button>
+                                <button class="add">+</button>
+                                <div class="numberOfItem">0</div>
+                                <button class="remove">-</button>
                             </div>
 
                             <div class="stock" id="">10</div>
@@ -262,9 +261,9 @@
                         <div class="itemDesc" id=""><h4>Covaxxine</h4><p>--Corona virus vaccine, permitted by indian govt.</p></div>
                         <div class="itemChange">
                             <div class="changeItem" id="V1">
-                                <button id="add">+</button>
-                                <div id="numberOfItem">0</div>
-                                <button id="remove">-</button>
+                                <button class="add">+</button>
+                                <div class="numberOfItem">0</div>
+                                <button class="remove">-</button>
                             </div>
 
                             <div class="stock" id="">10</div>
@@ -275,9 +274,9 @@
                         <div class="itemDesc" id=""><h4>Covi-shield</h4><p>--Corona virus vaccine, permitted by indian govt.</p></div>
                         <div class="itemChange">
                             <div class="changeItem" id="V2">
-                                <button id="add">+</button>
-                                <div id="numberOfItem">0</div>
-                                <button id="remove">-</button>
+                                <button class="add">+</button>
+                                <div class="numberOfItem">0</div>
+                                <button class="remove">-</button>
                             </div>
 
                             <div class="stock" id="">10</div>
@@ -288,9 +287,9 @@
                         <div class="itemDesc" id=""><h4>Pfizer</h4><p>--American Corona virus vaccine, permitted by indian govt.</p></div>
                         <div class="itemChange">
                             <div class="changeItem" id="V3">
-                                <button id="add">+</button>
-                                <div id="numberOfItem">0</div>
-                                <button id="remove">-</button>
+                                <button class="add">+</button>
+                                <div class="numberOfItem">0</div>
+                                <button class="remove">-</button>
                             </div>
 
                             <div class="stock" id="">10</div>
@@ -301,9 +300,9 @@
                         <div class="itemDesc" id=""><h4>Sputnik-v</h4><p>--Russian Corona virus vaccine, permitted by indian govt.</p></div>
                         <div class="itemChange">
                             <div class="changeItem" id="V4">
-                                <button id="add">+</button>
-                                <div id="numberOfItem">0</div>
-                                <button id="remove">-</button>
+                                <button class="add">+</button>
+                                <div class="numberOfItem">0</div>
+                                <button class="remove">-</button>
                             </div>
 
                             <div class="stock" id="">10</div>
@@ -314,9 +313,9 @@
                         <div class="itemDesc" id=""><h4>Johnson n Johnsons</h4><p>--American Corona virus vaccine, permitted by indian govt.</p></div>
                         <div class="itemChange">
                             <div class="changeItem" id="V5">
-                                <button id="add">+</button>
-                                <div id="numberOfItem">0</div>
-                                <button id="remove">-</button>
+                                <button class="add">+</button>
+                                <div class="numberOfItem">0</div>
+                                <button class="remove">-</button>
                             </div>
 
                             <div class="stock" id="">10</div>
@@ -331,9 +330,9 @@
                         <div class="itemDesc" id=""><h4>Vitamin-D</h4><p>--additional supplementary tablets for vitaminD</p></div>
                         <div class="itemChange">
                             <div class="changeItem" id="SP1">
-                                <button id="add">+</button>
-                                <div id="numberOfItem">0</div>
-                                <button id="remove">-</button>
+                                <button class="add">+</button>
+                                <div class="numberOfItem">0</div>
+                                <button class="remove">-</button>
                             </div>
 
                             <div class="stock" id="">10</div>
@@ -344,9 +343,9 @@
                         <div class="itemDesc" id=""><h4>Vitamin-C</h4><p>--additional supplementary tablets for vitaminC</p></div>
                         <div class="itemChange">
                             <div class="changeItem" id="SP2">
-                                <button id="add">+</button>
-                                <div id="numberOfItem">0</div>
-                                <button id="remove">-</button>
+                                <button class="add">+</button>
+                                <div class="numberOfItem">0</div>
+                                <button class="remove">-</button>
                             </div>
 
                             <div class="stock" id="">10</div>
@@ -357,9 +356,9 @@
                         <div class="itemDesc" id=""><h4>Vitamin-B12</h4><p>--additional supplementary tablets for vitaminB12</p></div>
                         <div class="itemChange">
                             <div class="changeItem" id="SP3">
-                                <button id="add">+</button>
-                                <div id="numberOfItem">0</div>
-                                <button id="remove">-</button>
+                                <button class="add">+</button>
+                                <div class="numberOfItem">0</div>
+                                <button class="remove">-</button>
                             </div>
 
                             <div class="stock" id="">10</div>
@@ -370,9 +369,9 @@
                         <div class="itemDesc" id=""><h4>Calcium</h4><p>--additional Calcium supplementary tablets</p></div>
                         <div class="itemChange">
                             <div class="changeItem" id="SP4">
-                                <button id="add">+</button>
-                                <div id="numberOfItem">0</div>
-                                <button id="remove">-</button>
+                                <button class="add">+</button>
+                                <div class="numberOfItem">0</div>
+                                <button class="remove">-</button>
                             </div>
 
                             <div class="stock" id="">10</div>
@@ -383,9 +382,9 @@
                         <div class="itemDesc" id=""><h4>Iron</h4><p>--additional Iron supplementary tablets</p></div>
                         <div class="itemChange">
                             <div class="changeItem" id="SP5">
-                                <button id="add">+</button>
-                                <div id="numberOfItem">0</div>
-                                <button id="remove">-</button>
+                                <button class="add">+</button>
+                                <div class="numberOfItem">0</div>
+                                <button class="remove">-</button>
                             </div>
 
                             <div class="stock" id="">10</div>
@@ -396,9 +395,9 @@
                         <div class="itemDesc" id=""><h4>Navaratna</h4><p>--hair oil, which provides a cooling after-effect </p></div>
                         <div class="itemChange">
                             <div class="changeItem" id="SP6">
-                                <button id="add">+</button>
-                                <div id="numberOfItem">0</div>
-                                <button id="remove">-</button>
+                                <button class="add">+</button>
+                                <div class="numberOfItem">0</div>
+                                <button class="remove">-</button>
                             </div>
         
                             <div class="stock" id="">10</div>
@@ -413,9 +412,9 @@
                         <div class="itemDesc" id=""><h4>Masks</h4><p>--fasionable masks for kids, men and women</p></div>
                         <div class="itemChange">
                             <div class="changeItem" id="O1">
-                                <button id="add">+</button>
-                                <div id="numberOfItem">0</div>
-                                <button id="remove">-</button>
+                                <button class="add">+</button>
+                                <div class="numberOfItem">0</div>
+                                <button class="remove">-</button>
                             </div>
 
                             <div class="stock" id="">10</div>
@@ -426,9 +425,9 @@
                         <div class="itemDesc" id=""><h4>PPE kits</h4><p>--PPE kits for professionals working in public among possible threats</p></div>
                         <div class="itemChange">
                             <div class="changeItem" id="O2">
-                                <button id="add">+</button>
-                                <div id="numberOfItem">0</div>
-                                <button id="remove">-</button>
+                                <button class="add">+</button>
+                                <div class="numberOfItem">0</div>
+                                <button class="remove">-</button>
                             </div>
 
                             <div class="stock" id="">10</div>
@@ -439,9 +438,9 @@
                         <div class="itemDesc" id=""><h4>Gloves</h4><p>--protective surgical gloves for hands, pair of two comes in a pack</p></div>
                         <div class="itemChange">
                             <div class="changeItem" id="O3">
-                                <button id="add">+</button>
-                                <div id="numberOfItem">0</div>
-                                <button id="remove">-</button>
+                                <button class="add">+</button>
+                                <div class="numberOfItem">0</div>
+                                <button class="remove">-</button>
                             </div>
 
                             <div class="stock" id="">10</div>
@@ -452,9 +451,9 @@
                         <div class="itemDesc" id=""><h4>Head-caps</h4><p>--Protective gear for heads, protects dust and dandruff</p></div>
                         <div class="itemChange">
                             <div class="changeItem" id="O4">
-                                <button id="add">+</button>
-                                <div id="numberOfItem">0</div>
-                                <button id="remove">-</button>
+                                <button class="add">+</button>
+                                <div class="numberOfItem">0</div>
+                                <button class="remove">-</button>
                             </div>
 
                             <div class="stock" id="">10</div>
@@ -465,9 +464,9 @@
                         <div class="itemDesc" id=""><h4>Sanitizers</h4><p>--Fragrant sanitizer for quick cleansing of hands</p></div>
                         <div class="itemChange">
                             <div class="changeItem" id="O5">
-                                <button id="add">+</button>
-                                <div id="numberOfItem">0</div>
-                                <button id="remove">-</button>
+                                <button class="add">+</button>
+                                <div class="numberOfItem">0</div>
+                                <button class="remove">-</button>
                             </div>
 
                             <div class="stock" id="">10</div>
@@ -478,9 +477,9 @@
                         <div class="itemDesc" id=""><h4>Disinfectant Spray</h4><p>--Surface disinfectant spray for protective use.</p></div>
                         <div class="itemChange">
                             <div class="changeItem" id="O6">
-                                <button id="add">+</button>
-                                <div id="numberOfItem">0</div>
-                                <button id="remove">-</button>
+                                <button class="add">+</button>
+                                <div class="numberOfItem">0</div>
+                                <button class="remove">-</button>
                             </div>
 
                             <div class="stock" id="">10</div>
