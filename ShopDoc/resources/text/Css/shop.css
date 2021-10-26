@@ -137,6 +137,21 @@
 button {
   border: none;
 }
+.changeItem #add,
+.changeItem #remove,
+.changeItem #numberOfItem {
+  text-align: center;
+  background: rgb(196, 194, 194);
+  line-height: normal;
+  border-radius: 13%;
+}
+
+.changeItem #add:hover,
+.changeItem #remove:hover {
+  color: rgb(246, 248, 246);
+  background: lightgrey;
+}
+
 .changeItem .add,
 .changeItem .remove,
 .changeItem .numberOfItem {
@@ -151,7 +166,6 @@ button {
   color: rgb(246, 248, 246);
   background: lightgrey;
 }
-
 .stock {
   width: 1.5em;
   height: 1.5em;

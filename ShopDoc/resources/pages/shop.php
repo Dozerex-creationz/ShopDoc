@@ -12,7 +12,7 @@
 
 
 <body>
-
+<?php include '../text/Php/accessItem.php';?>
 
  <a id="top"></a>   
 
@@ -35,7 +35,6 @@
 
 
 <main>
-
     <div class="tabSwitch">
         <div class="tab" id="tablet"> Tablets</div>
         <div class="tab" id="cream"> Creams</div>
@@ -44,449 +43,273 @@
         <div class="tab" id="supplements"> Supplements</div>
         <div class="tab" id="other"> Others</div>
     </div>
-    <DIV CLASS="itemContainer">
-        
-     
+    <div CLASS="itemContainer">
+        <script>
+            function changeData(val,uid)
+            {   console.log(val+" "+uid)
+                xhttp=new XMLHttpRequest();
+                var data="count="+val+"&uid="+uid;
+                console.log(data);
+                xhttp.open("POST","../text/Php/updateTemp.php",true);
+                xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                xhttp.send(data);
+                console.log("success");
+                xhttp.onreadystatechange=function(){
+                    if(this.readyState==4 && this.status==200)
+                    {   console.log(this.responseText);
+                    }
+                }    
+            }
+        </script>     
         <div class="innerItemContainer tablets hidden" id="inner-tablet" >
             <h2>Tablets</h2>
-            <div class="item" id="CalPal">
-                <div class="itemImg" id=""></div>
-                <div class="itemDesc" id=""><h4>CalPal</h4><p>--prescribed generally for fever in kids</p></div>
-                <div class="itemChange"> 
-                    <div class="changeItem" id="T1">
-                        <button class="add">+</button>
-                        <div class="numberOfItem">0</div>
-                        <button class="remove">-</button>
-                    </div>
-
-                    <div class="stock" id="">10</div>
-                </div>
-            </div>
-            <div class="item" id="Crocin">
-                <div class="itemImg" id=""></div>
-                <div class="itemDesc" id=""><h4>Crocin</h4><p>--prescribed generally for cold,fever.</p></div>
+            <?php 
+            $tabletresult=mysqli_query($con,$tabletQuery);
+            while($row=mysqli_fetch_array($tabletresult)){
+                echo ' <div class="item" id="item'.$row[0].'">
+                <div class="itemImg" ></div>
+                <div class="itemDesc" ><h4>'.$row[4].'</h4><p>'.$row[5].'</p></div>
                 <div class="itemChange">
-                    <div class="changeItem" id="T2">
-                        <button class="add">+</button>
-                        <div class="numberOfItem">0</div>
-                        <button class="remove">-</button>
+                    <div class="changeItem" id=changeItem'.$row[0].'>
+                        <button class="add" id="add'.$row[0].'">+</button>
+                        <div class="numberOfItem" id="noi'.$row[0].'">'.$row[6].'</div>
+                        <button class="remove" id="rem'.$row[0].'">-</button>
                     </div>
 
-                    <div class="stock" id="">10</div>
+                    <div class="stock" id="stockOf'.$row[0].'">'.$row[1].'</div>
                 </div>
-            </div>
-            <div class="item" id="Paracetemol">
-                <div class="itemImg" id=""></div>
-                <div class="itemDesc" id=""><h4>Paracetemol</h4><p>--prescribed generally for cold and fever, along with crocin</p></div>
-                <div class="itemChange">
-                    <div class="changeItem" id="T3">
-                        <button class="add">+</button>
-                        <div class="numberOfItem">0</div>
-                        <button class="remove">-</button>
-                    </div>
+                </div>';
 
-                    <div class="stock" id="">10</div>
-                </div>
-            </div>
-            <div class="item" id="Gelusil">
-                <div class="itemImg" id=""></div>
-                <div class="itemDesc" id=""><h4>Gelusil</h4><p>--reduces acidity</p></div>
-                <div class="itemChange">
-                    <div class="changeItem" id="T4">
-                        <button class="add">+</button>
-                        <div class="numberOfItem">0</div>
-                        <button class="remove">-</button>
-                    </div>
-
-                    <div class="stock" id="">10</div>
-                </div>
-            </div>
-            <div class="item" id="Pentacid">
-                <div class="itemImg" id=""></div>
-                <div class="itemDesc" id=""><h4>Pentacid</h4><p>--prescribed for peptic ulcer.</p></div>
-                <div class="itemChange">
-                    <div class="changeItem" id="T5">
-                        <button class="add">+</button>
-                        <div class="numberOfItem">0</div>
-                        <button class="remove">-</button>
-                    </div>
-
-                    <div class="stock" id="">10</div>
-                </div>
-            </div>            
-
+                echo "<script> 
+                
+                const add".$row[0]."=document.getElementById('add".$row[0]."');    
+                const noi".$row[0]."=document.getElementById('noi".$row[0]."');    
+                const rem".$row[0]."=document.getElementById('rem".$row[0]."');    
+                var new".$row[0]."=".$row[6].";
+                add".$row[0].".addEventListener('click',()=>{
+                    new".$row[0]."=new".$row[0]."+1;
+                    noi".$row[0].".innerHTML=new".$row[0].";
+                    changeData(new".$row[0].",".$row[0].");
+                })
+                rem".$row[0].".addEventListener('click',()=>{
+                    if(new".$row[0]."!=0){
+                    new".$row[0]."=new".$row[0]."-1;                    
+                    noi".$row[0].".innerHTML=new".$row[0].";
+                    changeData(new".$row[0].",".$row[0]."); 
+                  }
+            })
+                </script>";
+    
+            }
+            mysqli_free_result($tabletresult);
+            ?>
         </div>
         <div class="innerItemContainer creams" id="inner-cream">
             <h2>Creams</h2>
-            <div class="item" id="Tincture">
-                <div class="itemImg " id=""></div>
-                <div class="itemDesc" id=""><h4>Tinture</h4><p>--used for slight scratches, as an anti-septic</p></div>
+            <?php 
+            $creamresult=mysqli_query($con,$creamQuery);
+            while($row=mysqli_fetch_row($creamresult)){
+                echo ' <div class="item" id="item'.$row[0].'">
+                <div class="itemImg" ></div>
+                <div class="itemDesc" ><h4>'.$row[4].'</h4><p>'.$row[5].'</p></div>
                 <div class="itemChange">
-                    <div class="changeItem" id="C1">
-                        <button class="add">+</button>
-                        <div class="numberOfItem">0</div>
-                        <button class="remove">-</button>
+                    <div class="changeItem" id=changeItem'.$row[0].'>
+                        <button class="add" id="add'.$row[0].'">+</button>
+                        <div class="numberOfItem" id="noi'.$row[0].'">'.$row[6].'</div>
+                        <button class="remove" id="rem'.$row[0].'">-</button>
                     </div>
 
-                    <div class="stock" id="">10</div>
+                    <div class="stock" id="stockOf'.$row[0].'">'.$row[1].'</div>
                 </div>
-            </div>
-            <div class="item" id="Calamine">
-                <div class="itemImg" id=""></div>
-                <div class="itemDesc" id=""><h4>Calamine</h4><p>--used for skin related uncomfortablilities.</p></div>
-                <div class="itemChange">
-                    <div class="changeItem" id="C2">
-                        <button class="add">+</button>
-                        <div class="numberOfItem">0</div>
-                        <button class="remove">-</button>
-                    </div>
-                    <div class="stock" id="">10</div>
-                </div>
-            </div>
-            <div class="item" id="AxeBrand">
-                <div class="itemImg" id=""></div>
-                <div class="itemDesc" id=""><h4>Axe-Brand Oil</h4><p>--Eucalyptus oil, used for head aches.</p></div>
-                <div class="itemChange">
-                    <div class="changeItem" id="C3">
-                        <button class="add">+</button>
-                        <div class="numberOfItem">0</div>
-                        <button class="remove">-</button>
-                    </div>
-
-                    <div class="stock" id="">10</div>
-                </div>
-            </div>
-            <div class="item" id="Moov">
-                <div class="itemImg" id=""></div>
-                <div class="itemDesc" id=""><h4>Moov</h4><p>--used for Muscle fatigues and internal injuries.</p></div>
-                <div class="itemChange">
-                    <div class="changeItem" id="C4">
-                        <button class="add">+</button>
-                        <div class="numberOfItem">0</div>
-                        <button class="remove">-</button>
-                    </div>
-
-                    <div class="stock" id="">10</div>
-                </div>
-            </div>
-            <div class="item" id="Iodex">
-                <div class="itemImg" id=""></div>
-                <div class="itemDesc" id=""><h4>Iodex</h4><p>--used for Muscle fatigues and internal injuries. </p></div>
-                <div class="itemChange">
-                    <div class="changeItem" id="C5">
-                        <button class="add">+</button>
-                        <div class="numberOfItem">0</div>
-                        <button class="remove">-</button>
-                    </div>
-
-                    <div class="stock" id="">10</div>
-                </div>
-            </div>            
+            </div>';
+            echo "<script> 
+                const add".$row[0]."=document.getElementById('add".$row[0]."');    
+                const noi".$row[0]."=document.getElementById('noi".$row[0]."');    
+                const rem".$row[0]."=document.getElementById('rem".$row[0]."');    
+                var new".$row[0]."=".$row[6].";
+                add".$row[0].".addEventListener('click',()=>{
+                    new".$row[0]."=new".$row[0]."+1;
+                    noi".$row[0].".innerHTML=new".$row[0].";
+                    changeData(new".$row[0].",".$row[0].");
+                })
+                rem".$row[0].".addEventListener('click',()=>{
+                    if(new".$row[0]."!=0){
+                    new".$row[0]."=new".$row[0]."-1;                    
+                    noi".$row[0].".innerHTML=new".$row[0].";
+                    changeData(new".$row[0].",".$row[0]."); 
+                  }
+            })
+                </script>";
+            }
+            mysqli_free_result($creamresult);
+            ?>
 
 
         </div>
         <div class="innerItemContainer syrup hidden" id="inner-syrup">
             <h2>Syrups</h2>
-                    <div class="item" id="Benadryll">
-                        <div class="itemImg" id=""></div>
-                        <div class="itemDesc" id=""><h4>Benadryll</h4><p>--prescribed generally for dry cough.</p></div>
-                        <div class="itemChange">
-                            <div class="changeItem" id="S1">
-                                <button class="add">+</button>
-                                <div class="numberOfItem">0</div>
-                                <button class="remove">-</button>
-                            </div>
-
-                            <div class="stock" id="">10</div>
-                        </div>
-                    </div>
-                    <div class="item" id="Gelusil-Syrup">
-                        <div class="itemImg" id=""></div>
-                        <div class="itemDesc" id=""><h4>Gelusil-Syrup</h4><p>--reduces acidity</p></div>
-                        <div class="itemChange">
-                            <div class="changeItem" id="S2">
-                                <button class="add">+</button>
-                                <div class="numberOfItem">0</div>
-                                <button class="remove">-</button>
-                            </div>
-
-                            <div class="stock" id="">10</div>
-                        </div>
-                    </div>
-                    <div class="item" id="Triaminic">
-                        <div class="itemImg" id=""></div>
-                        <div class="itemDesc" id=""><h4>Triaminic</h4><p>--Vintage medicine for dry cough, orange flavour.</p></div>
-                        <div class="itemChange">
-                            <div class="changeItem" id="S3">
-                                <button class="add">+</button>
-                                <div class="numberOfItem">0</div>
-                                <button class="remove">-</button>
-                            </div>
-
-                            <div class="stock" id="">10</div>
-                        </div>
-                    </div>
-                    <div class="item" id="Dexorange">
-                        <div class="itemImg" id=""></div>
-                        <div class="itemDesc" id=""><h4>Dexorange</h4><p>--syrup for haemoglobin count improvement</p></div>
-                        <div class="itemChange">
-                            <div class="changeItem" id="S4">
-                                <button class="add">+</button>
-                                <div class="numberOfItem">0</div>
-                                <button class="remove">-</button>
-                            </div>
-
-                            <div class="stock" id="">10</div>
-                        </div>
-                    </div>
-                    <div class="item" id="Eno">
-                        <div class="itemImg" id=""></div>
-                        <div class="itemDesc" id=""><h4>Eno</h4><p>--reduces acidity</p></div>
-                        <div class="itemChange">
-                            <div class="changeItem" id="S5">
-                                <button class="add">+</button>
-                                <div class="numberOfItem">0</div>
-                                <button class="remove">-</button>
-                            </div>
-
-                            <div class="stock" id="">10</div>
-                        </div>
+            <?php 
+            $syrupresult=mysqli_query($con,$syrupQuery);
+            while($row=mysqli_fetch_row($syrupresult)){
+                echo ' <div class="item" id="item'.$row[0].'">
+                <div class="itemImg" ></div>
+                <div class="itemDesc" ><h4>'.$row[4].'</h4><p>'.$row[5].'</p></div>
+                <div class="itemChange">
+                    <div class="changeItem" id=changeItem'.$row[0].'>
+                        <button class="add" id="add'.$row[0].'">+</button>
+                        <div class="numberOfItem" id="noi'.$row[0].'">'.$row[6].'</div>
+                        <button class="remove" id="rem'.$row[0].'">-</button>
                     </div>
 
+                    <div class="stock" id="stockOf'.$row[0].'">'.$row[1].'</div>
+                </div>
+            </div>';
+            echo "<script> 
+                const add".$row[0]."=document.getElementById('add".$row[0]."');    
+                const noi".$row[0]."=document.getElementById('noi".$row[0]."');    
+                const rem".$row[0]."=document.getElementById('rem".$row[0]."');    
+                var new".$row[0]."=".$row[6].";
+                add".$row[0].".addEventListener('click',()=>{
+                    new".$row[0]."=new".$row[0]."+1;
+                    noi".$row[0].".innerHTML=new".$row[0].";
+                    changeData(new".$row[0].",".$row[0].");
+                })
+                rem".$row[0].".addEventListener('click',()=>{
+                    if(new".$row[0]."!=0){
+                    new".$row[0]."=new".$row[0]."-1;                    
+                    noi".$row[0].".innerHTML=new".$row[0].";
+                    changeData(new".$row[0].",".$row[0]."); 
+                  }
+            })
+                </script>";
+            }
+            mysqli_free_result($syrupresult);
+            ?>
         </div>
         <div class="innerItemContainer vaccine hidden" id="inner-vaccine">
             <h2>Vaccines</h2>
-                    <div class="item" id="Covaxxine">
-                        <div class="itemImg" id=""></div>
-                        <div class="itemDesc" id=""><h4>Covaxxine</h4><p>--Corona virus vaccine, permitted by indian govt.</p></div>
-                        <div class="itemChange">
-                            <div class="changeItem" id="V1">
-                                <button class="add">+</button>
-                                <div class="numberOfItem">0</div>
-                                <button class="remove">-</button>
-                            </div>
-
-                            <div class="stock" id="">10</div>
-                        </div>
-                    </div>
-                    <div class="item" id="CoviShield">
-                        <div class="itemImg" id=""></div>
-                        <div class="itemDesc" id=""><h4>Covi-shield</h4><p>--Corona virus vaccine, permitted by indian govt.</p></div>
-                        <div class="itemChange">
-                            <div class="changeItem" id="V2">
-                                <button class="add">+</button>
-                                <div class="numberOfItem">0</div>
-                                <button class="remove">-</button>
-                            </div>
-
-                            <div class="stock" id="">10</div>
-                        </div>
-                    </div>
-                    <div class="item" id="Pfizer">
-                        <div class="itemImg" id=""></div>
-                        <div class="itemDesc" id=""><h4>Pfizer</h4><p>--American Corona virus vaccine, permitted by indian govt.</p></div>
-                        <div class="itemChange">
-                            <div class="changeItem" id="V3">
-                                <button class="add">+</button>
-                                <div class="numberOfItem">0</div>
-                                <button class="remove">-</button>
-                            </div>
-
-                            <div class="stock" id="">10</div>
-                        </div>
-                    </div>
-                    <div class="item" id="Sputnik-V">
-                        <div class="itemImg" id=""></div>
-                        <div class="itemDesc" id=""><h4>Sputnik-v</h4><p>--Russian Corona virus vaccine, permitted by indian govt.</p></div>
-                        <div class="itemChange">
-                            <div class="changeItem" id="V4">
-                                <button class="add">+</button>
-                                <div class="numberOfItem">0</div>
-                                <button class="remove">-</button>
-                            </div>
-
-                            <div class="stock" id="">10</div>
-                        </div>
-                    </div>
-                    <div class="item" id="JnJ">
-                        <div class="itemImg" id=""></div>
-                        <div class="itemDesc" id=""><h4>Johnson n Johnsons</h4><p>--American Corona virus vaccine, permitted by indian govt.</p></div>
-                        <div class="itemChange">
-                            <div class="changeItem" id="V5">
-                                <button class="add">+</button>
-                                <div class="numberOfItem">0</div>
-                                <button class="remove">-</button>
-                            </div>
-
-                            <div class="stock" id="">10</div>
-                        </div>
+            <?php 
+            $vaccineresult=mysqli_query($con,$vaccineQuery);
+            while($row=mysqli_fetch_row($vaccineresult)){
+                echo ' <div class="item" id="item'.$row[0].'">
+                <div class="itemImg" ></div>
+                <div class="itemDesc" ><h4>'.$row[4].'</h4><p>'.$row[5].'</p></div>
+                <div class="itemChange">
+                    <div class="changeItem" id=changeItem'.$row[0].'>
+                        <button class="add" id="add'.$row[0].'">+</button>
+                        <div class="numberOfItem" id="noi'.$row[0].'">'.$row[6].'</div>
+                        <button class="remove" id="rem'.$row[0].'">-</button>
                     </div>
 
+                    <div class="stock" id="stockOf'.$row[0].'">'.$row[1].'</div>
+                </div>
+            </div>';
+            
+            echo "<script> 
+                const add".$row[0]."=document.getElementById('add".$row[0]."');    
+                const noi".$row[0]."=document.getElementById('noi".$row[0]."');    
+                const rem".$row[0]."=document.getElementById('rem".$row[0]."');    
+                var new".$row[0]."=".$row[6].";
+                add".$row[0].".addEventListener('click',()=>{
+                    new".$row[0]."=new".$row[0]."+1;
+                    noi".$row[0].".innerHTML=new".$row[0].";
+                    changeData(new".$row[0].",".$row[0].");
+                })
+                rem".$row[0].".addEventListener('click',()=>{
+                    if(new".$row[0]."!=0){
+                    new".$row[0]."=new".$row[0]."-1;                    
+                    noi".$row[0].".innerHTML=new".$row[0].";
+                    changeData(new".$row[0].",".$row[0]."); 
+                  }
+            })
+                </script>";
+            }
+            mysqli_free_result($vaccineresult);
+            ?>
         </div>
         <div class="innerItemContainer supplements hidden" id="inner-supplement">
             <h2>Supplements</h2>
-                    <div class="item" id="VitaminD">
-                        <div class="itemImg" id=""></div>
-                        <div class="itemDesc" id=""><h4>Vitamin-D</h4><p>--additional supplementary tablets for vitaminD</p></div>
-                        <div class="itemChange">
-                            <div class="changeItem" id="SP1">
-                                <button class="add">+</button>
-                                <div class="numberOfItem">0</div>
-                                <button class="remove">-</button>
-                            </div>
-
-                            <div class="stock" id="">10</div>
-                        </div>
-                    </div>
-                    <div class="item" id="VitaminC">
-                        <div class="itemImg" id=""></div>
-                        <div class="itemDesc" id=""><h4>Vitamin-C</h4><p>--additional supplementary tablets for vitaminC</p></div>
-                        <div class="itemChange">
-                            <div class="changeItem" id="SP2">
-                                <button class="add">+</button>
-                                <div class="numberOfItem">0</div>
-                                <button class="remove">-</button>
-                            </div>
-
-                            <div class="stock" id="">10</div>
-                        </div>
-                    </div>
-                    <div class="item" id="VitaminB12">
-                        <div class="itemImg" id=""></div>
-                        <div class="itemDesc" id=""><h4>Vitamin-B12</h4><p>--additional supplementary tablets for vitaminB12</p></div>
-                        <div class="itemChange">
-                            <div class="changeItem" id="SP3">
-                                <button class="add">+</button>
-                                <div class="numberOfItem">0</div>
-                                <button class="remove">-</button>
-                            </div>
-
-                            <div class="stock" id="">10</div>
-                        </div>
-                    </div>
-                    <div class="item" id="Calcium">
-                        <div class="itemImg" id=""></div>
-                        <div class="itemDesc" id=""><h4>Calcium</h4><p>--additional Calcium supplementary tablets</p></div>
-                        <div class="itemChange">
-                            <div class="changeItem" id="SP4">
-                                <button class="add">+</button>
-                                <div class="numberOfItem">0</div>
-                                <button class="remove">-</button>
-                            </div>
-
-                            <div class="stock" id="">10</div>
-                        </div>
-                    </div>
-                    <div class="item" id="Iron">
-                        <div class="itemImg" id=""></div>
-                        <div class="itemDesc" id=""><h4>Iron</h4><p>--additional Iron supplementary tablets</p></div>
-                        <div class="itemChange">
-                            <div class="changeItem" id="SP5">
-                                <button class="add">+</button>
-                                <div class="numberOfItem">0</div>
-                                <button class="remove">-</button>
-                            </div>
-
-                            <div class="stock" id="">10</div>
-                        </div>
-                    </div>
-                    <div class="item" id="navaratna">
-                        <div class="itemImg" id=""></div>
-                        <div class="itemDesc" id=""><h4>Navaratna</h4><p>--hair oil, which provides a cooling after-effect </p></div>
-                        <div class="itemChange">
-                            <div class="changeItem" id="SP6">
-                                <button class="add">+</button>
-                                <div class="numberOfItem">0</div>
-                                <button class="remove">-</button>
-                            </div>
-        
-                            <div class="stock" id="">10</div>
-                        </div>
+            <?php 
+            $supplementresult=mysqli_query($con,$supplementQuery);
+            while($row=mysqli_fetch_row($supplementresult)){
+                echo ' <div class="item" id="item'.$row[0].'">
+                <div class="itemImg" ></div>
+                <div class="itemDesc" ><h4>'.$row[4].'</h4><p>'.$row[5].'</p></div>
+                <div class="itemChange">
+                    <div class="changeItem" id=changeItem'.$row[0].'>
+                        <button class="add" id="add'.$row[0].'">+</button>
+                        <div class="numberOfItem" id="noi'.$row[0].'">'.$row[6].'</div>
+                        <button class="remove" id="rem'.$row[0].'">-</button>
                     </div>
 
+                    <div class="stock" id="stockOf'.$row[0].'">'.$row[1].'</div>
+                </div>
+            </div>';
+            
+            echo "<script> 
+                const add".$row[0]."=document.getElementById('add".$row[0]."');    
+                const noi".$row[0]."=document.getElementById('noi".$row[0]."');    
+                const rem".$row[0]."=document.getElementById('rem".$row[0]."');    
+                var new".$row[0]."=".$row[6].";
+                add".$row[0].".addEventListener('click',()=>{
+                    new".$row[0]."=new".$row[0]."+1;
+                    noi".$row[0].".innerHTML=new".$row[0].";
+                    changeData(new".$row[0].",".$row[0].");
+                })
+                rem".$row[0].".addEventListener('click',()=>{
+                    if(new".$row[0]."!=0){
+                    new".$row[0]."=new".$row[0]."-1;                    
+                    noi".$row[0].".innerHTML=new".$row[0].";
+                    changeData(new".$row[0].",".$row[0]."); 
+                  }
+            })
+                </script>";
+            }
+            mysqli_free_result($supplementresult);
+            ?>
         </div>
         <div class="innerItemContainer other hidden" id="inner-other">
             <h2>Other Goods</h2>
-                    <div class="item" id="Masks">
-                        <div class="itemImg" id=""></div>
-                        <div class="itemDesc" id=""><h4>Masks</h4><p>--fasionable masks for kids, men and women</p></div>
-                        <div class="itemChange">
-                            <div class="changeItem" id="O1">
-                                <button class="add">+</button>
-                                <div class="numberOfItem">0</div>
-                                <button class="remove">-</button>
-                            </div>
-
-                            <div class="stock" id="">10</div>
-                        </div>
+            <?php 
+            $otherresult=mysqli_query($con,$otherQuery);
+            while($row=mysqli_fetch_row($otherresult)){
+                echo ' <div class="item" id="item'.$row[0].'">
+                <div class="itemImg" ></div>
+                <div class="itemDesc" ><h4>'.$row[4].'</h4><p>'.$row[5].'</p></div>
+                <div class="itemChange">
+                    <div class="changeItem" id=changeItem'.$row[0].'>
+                        <button class="add" id="add'.$row[0].'">+</button>
+                        <div class="numberOfItem" id="noi'.$row[0].'">'.$row[6].'</div>
+                        <button class="remove" id="rem'.$row[0].'">-</button>
                     </div>
-                    <div class="item" id="PPEkit">
-                        <div class="itemImg" id=""></div>
-                        <div class="itemDesc" id=""><h4>PPE kits</h4><p>--PPE kits for professionals working in public among possible threats</p></div>
-                        <div class="itemChange">
-                            <div class="changeItem" id="O2">
-                                <button class="add">+</button>
-                                <div class="numberOfItem">0</div>
-                                <button class="remove">-</button>
-                            </div>
 
-                            <div class="stock" id="">10</div>
-                        </div>
-                    </div>
-                    <div class="item" id="Gloves">
-                        <div class="itemImg" id=""></div>
-                        <div class="itemDesc" id=""><h4>Gloves</h4><p>--protective surgical gloves for hands, pair of two comes in a pack</p></div>
-                        <div class="itemChange">
-                            <div class="changeItem" id="O3">
-                                <button class="add">+</button>
-                                <div class="numberOfItem">0</div>
-                                <button class="remove">-</button>
-                            </div>
-
-                            <div class="stock" id="">10</div>
-                        </div>
-                    </div>
-                    <div class="item" id="headCaps">
-                        <div class="itemImg" id=""></div>
-                        <div class="itemDesc" id=""><h4>Head-caps</h4><p>--Protective gear for heads, protects dust and dandruff</p></div>
-                        <div class="itemChange">
-                            <div class="changeItem" id="O4">
-                                <button class="add">+</button>
-                                <div class="numberOfItem">0</div>
-                                <button class="remove">-</button>
-                            </div>
-
-                            <div class="stock" id="">10</div>
-                        </div>
-                    </div>
-                    <div class="item" id="Sanitizers">
-                        <div class="itemImg" id=""></div>
-                        <div class="itemDesc" id=""><h4>Sanitizers</h4><p>--Fragrant sanitizer for quick cleansing of hands</p></div>
-                        <div class="itemChange">
-                            <div class="changeItem" id="O5">
-                                <button class="add">+</button>
-                                <div class="numberOfItem">0</div>
-                                <button class="remove">-</button>
-                            </div>
-
-                            <div class="stock" id="">10</div>
-                        </div>
-                    </div>
-                    <div class="item" id="disinfectant">
-                        <div class="itemImg" id=""></div>
-                        <div class="itemDesc" id=""><h4>Disinfectant Spray</h4><p>--Surface disinfectant spray for protective use.</p></div>
-                        <div class="itemChange">
-                            <div class="changeItem" id="O6">
-                                <button class="add">+</button>
-                                <div class="numberOfItem">0</div>
-                                <button class="remove">-</button>
-                            </div>
-
-                            <div class="stock" id="">10</div>
-                        </div>
-                    </div>
+                    <div class="stock" id="stockOf'.$row[0].'">'.$row[1].'</div>
+                </div>
+            </div>';
+            
+            echo "<script> 
+                const add".$row[0]."=document.getElementById('add".$row[0]."');    
+                const noi".$row[0]."=document.getElementById('noi".$row[0]."');    
+                const rem".$row[0]."=document.getElementById('rem".$row[0]."');    
+                var new".$row[0]."=".$row[6].";
+                add".$row[0].".addEventListener('click',()=>{
+                    new".$row[0]."=new".$row[0]."+1;
+                    noi".$row[0].".innerHTML=new".$row[0].";
+                    changeData(new".$row[0].",".$row[0].");
+                })
+                rem".$row[0].".addEventListener('click',()=>{
+                    if(new".$row[0]."!=0){
+                    new".$row[0]."=new".$row[0]."-1;                    
+                    noi".$row[0].".innerHTML=new".$row[0].";
+                    changeData(new".$row[0].",".$row[0]."); 
+                  }
+            })
+                </script>";
+            }
+            mysqli_free_result($otherresult);
+            ?>
         </div>
-    </DIV>
+    </div>
 
 
 </main>
