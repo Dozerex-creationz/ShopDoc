@@ -217,6 +217,26 @@ legend:hover {
   animation: blinkTwice 0.4s linear forwards;
 }
 
+button span.pay {
+  position: fixed;
+  text-align: center;
+  line-height: 50px;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: gold;
+  color: rgb(235, 235, 235);
+  border: 2px white solid;
+  font-size: 225%;
+}
+
+button span.pay:hover {
+  animation: wiggle 2s linear;
+  box-shadow: 5px 5px 10px goldenrod;
+}
+
 @keyframes blinkTwice {
   0% {
   }

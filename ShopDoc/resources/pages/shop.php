@@ -61,13 +61,9 @@
                 }    
             }
         </script>     
-        <div class="innerItemContainer tablets hidden" id="inner-tablet" >
+        <div class="innerItemContainer Tablet hidden" id="inner-tablet" >
             <h2>Tablets</h2>
             <?php
-            $Session_user_id=$_SESSION["userId"];
-            $storeExistingTemp=mysqli_query($con,"select * from cart_list WHERE User_ID='$Session_user_id'");
-            while($rowResult=mysqli_fetch_row($storeExistingTemp)){
-            $updateTempCount=mysqli_query($con,"Update product_details SET tempCount='$rowResult[3]' WHERE Product_ID='$rowResult[2]'");}
             $tabletresult=mysqli_query($con,$tabletQuery);
             while($row=mysqli_fetch_array($tabletresult)){
                 echo ' <div class="item" id="item'.$row[0].'">
@@ -108,7 +104,7 @@
             mysqli_free_result($tabletresult);
             ?>
         </div>
-        <div class="innerItemContainer creams" id="inner-cream">
+        <div class="innerItemContainer Cream" id="inner-cream">
             <h2>Creams</h2>
             <?php 
             $creamresult=mysqli_query($con,$creamQuery);
@@ -150,7 +146,7 @@
 
 
         </div>
-        <div class="innerItemContainer syrup hidden" id="inner-syrup">
+        <div class="innerItemContainer Syrup hidden" id="inner-syrup">
             <h2>Syrups</h2>
             <?php 
             $syrupresult=mysqli_query($con,$syrupQuery);
@@ -190,7 +186,7 @@
             mysqli_free_result($syrupresult);
             ?>
         </div>
-        <div class="innerItemContainer vaccine hidden" id="inner-vaccine">
+        <div class="innerItemContainer Vaccine hidden" id="inner-vaccine">
             <h2>Vaccines</h2>
             <?php 
             $vaccineresult=mysqli_query($con,$vaccineQuery);
@@ -231,7 +227,7 @@
             mysqli_free_result($vaccineresult);
             ?>
         </div>
-        <div class="innerItemContainer supplements hidden" id="inner-supplement">
+        <div class="innerItemContainer Supplement hidden" id="inner-supplement">
             <h2>Supplements</h2>
             <?php 
             $supplementresult=mysqli_query($con,$supplementQuery);
@@ -272,7 +268,7 @@
             mysqli_free_result($supplementresult);
             ?>
         </div>
-        <div class="innerItemContainer other hidden" id="inner-other">
+        <div class="innerItemContainer Other hidden" id="inner-other">
             <h2>Other Goods</h2>
             <?php 
             $otherresult=mysqli_query($con,$otherQuery);

@@ -85,24 +85,25 @@
   grid-template-columns: 25% 50% 25%;
   overflow: hidden;
   margin-top: 10vh;
+  font-size: 1rem;
 }
 
-.creams .itemImg {
+.Cream .itemImg {
   background-image: url(../../images/creams.jfif);
 }
-.syrup .itemImg {
+.Syrup .itemImg {
   background-image: url(../../images/syrup.jfif);
 }
-.other .itemImg {
+.Other .itemImg {
   background-image: url(../../images/other.jfif);
 }
-.tablets .itemImg {
+.Tablet .itemImg {
   background-image: url(../../images/tablets.jfif);
 }
-.supplements .itemImg {
+.Supplement .itemImg {
   background-image: url(../../images/supplements.jfif);
 }
-.vaccine .itemImg {
+.Vaccine .itemImg {
   background-image: url(../../images/vaccine.jfif);
 }
 .itemDesc {
@@ -175,3 +176,4 @@ button {
   line-height: 1.5em;
   background: rgb(192, 190, 190);
 }
+
