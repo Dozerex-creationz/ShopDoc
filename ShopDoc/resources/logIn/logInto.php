@@ -18,7 +18,7 @@ if($count==1)
     $_SESSION["name"]=$row[1];
     $_SESSION["userId"]=$row[0];
     echo "console.log(".$name.")";
-    header("Location: ../user/index.php");
+    header("Location: ../user/index.php");   
 }
 else{
     header("Location: logIn.html");

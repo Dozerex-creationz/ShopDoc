@@ -35,8 +35,8 @@
 <fieldset>
     <legend>Profile settings:</legend>
     <span class="setting"><em>Delete the history of purchase:</em><button id="theme" style="float:right">Delete order history</button></span>
-    <span class="setting"><em>Empty your shopping cart:</em><button id="theme" style="float:right">Empty cart</button></span>
-    <span class="setting"><em>Leave this profile:</em><button id="theme" style="float:right" onClick="window.location.assign('logOut.php')">Log Out</button></span>
+    <span class="setting"><em>Empty your shopping cart:</em><button id="theme" style="float:right" onClick="window.location.assign('Functions/clearCart.php')">Empty cart</button></span>
+    <span class="setting"><em>Leave this profile:</em><button id="theme" style="float:right" onClick="window.location.assign('Functions/logOut.php')">Log Out</button></span>
 
 </fieldset>
 

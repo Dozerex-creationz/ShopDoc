@@ -45,10 +45,10 @@
     </div>
     <div CLASS="itemContainer">
         <script>
-            function changeData(val,uid)
-            {   console.log(val+" "+uid)
+            function changeData(val,pid)
+            {   console.log(val+" "+pid)
                 xhttp=new XMLHttpRequest();
-                var data="count="+val+"&uid="+uid;
+                var data="count="+val+"&pid="+pid;
                 console.log(data);
                 xhttp.open("POST","../text/Php/updateTemp.php",true);
                 xhttp.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
@@ -63,7 +63,11 @@
         </script>     
         <div class="innerItemContainer tablets hidden" id="inner-tablet" >
             <h2>Tablets</h2>
-            <?php 
+            <?php
+            $Session_user_id=$_SESSION["userId"];
+            $storeExistingTemp=mysqli_query($con,"select * from cart_list WHERE User_ID='$Session_user_id'");
+            while($rowResult=mysqli_fetch_row($storeExistingTemp)){
+            $updateTempCount=mysqli_query($con,"Update product_details SET tempCount='$rowResult[3]' WHERE Product_ID='$rowResult[2]'");}
             $tabletresult=mysqli_query($con,$tabletQuery);
             while($row=mysqli_fetch_array($tabletresult)){
                 echo ' <div class="item" id="item'.$row[0].'">
