@@ -30,6 +30,11 @@ $new=mysqli_query($con,"SELECT Product_ID,Number from cart_list Where User_ID='$
 while($ren=mysqli_fetch_array($new)){
     $cost=$cost+calcCost($ren[0],$ren[1]);
 }
+
+    if($_SERVER['REQUEST_METHOD'] == "POST" and isset($_POST['pay']))
+    {
+        pay($cost);
+    }
 function pay($cost){
     $con=mysqli_connect("localhost","root","","shopdoc");
     $user=$_SESSION["userId"];
@@ -47,7 +52,7 @@ function pay($cost){
 ?>
 
 <h1 id='cont'> The Amount Payable is: ₹<?php echo $cost;?>/-</h1>
-<div class="btns"><button onclick="window.location.assign('../cart.php')">--Go Back to cart</button><button onclick="<?php echo pay($cost)?>">₹--Pay Now</button></div>
+<div class="btns"><button onclick="window.location.assign('../cart.php')">Go Back to cart</button><form method="POST"><INPUT type="submit" name="pay" value="₹ Pay Now"></form></div>
 <a href="../cart.php" class="back"><i class="fas fa-arrow-circle-left fa-5x"></i></a>
 </div>
 

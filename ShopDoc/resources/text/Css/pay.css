@@ -20,7 +20,8 @@ div.btns {
   display: inline-flex;
   justify-content: space-around;
 }
-button {
+button,
+form input[type="submit"] {
   width: 10em;
   height: 50px;
   color: white;
@@ -32,7 +33,8 @@ button {
   background: #f2bf16;
 }
 
-button:hover {
+button:hover,
+form input:hover {
   cursor: pointer;
 }
 a {
