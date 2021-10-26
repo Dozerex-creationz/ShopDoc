@@ -32,7 +32,7 @@
         <span class="profileSpan">Age:<input type="text" id="age" name="age" value="<?php echo $_SESSION["age"]?>" disabled></span>
         <span class="profileSpan">Work:<input type="text" id="work" name="work" value="<?php echo $_SESSION["work"]?>" disabled></span>
         <span class="profileSpan">Address:<input type="text" class="marquee" id="address" name="address" value="<?php echo $_SESSION["address"]?>" disabled></span>
-        <span class="profileSpan">Amount Paid:<input type="number" id="amtPaid" name="amtPaid" value="" disabled></span>
+        <span class="profileSpan">Amount Paid:<input type="number" id="amtPaid" name="amtPaid" value="<?php echo $_SESSION["amount"]?>" disabled></span>
     </fieldset>
 
 
