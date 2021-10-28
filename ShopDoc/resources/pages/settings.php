@@ -37,7 +37,11 @@
     <span class="setting"><em>Delete the history of purchase:</em><button id="theme" style="float:right" onClick="window.location.assign('Functions/deleteOrderHistory.php')">Delete order history</button></span>
     <span class="setting"><em>Empty your shopping cart:</em><button id="theme" style="float:right" onClick="window.location.assign('Functions/clearCart.php')">Empty cart</button></span>
     <span class="setting"><em>Leave this profile:</em><button id="theme" style="float:right" onClick="window.location.assign('Functions/logOut.php')">Log Out</button></span>
-
+    <?php
+    $route='"Functions/admin.php"';
+    if($_SESSION["userId"]=="1" or $_SESSION["userId"]=="2" or $_SESSION["userId"]=="3"){
+        echo "<span class='setting'><em>Explore Admin Privilages:</em><button id='theme' style='float:right' onClick='window.location.assign(".$route.")'>Admin Mode</button></span>";
+    }?>
 </fieldset>
 
 </main>

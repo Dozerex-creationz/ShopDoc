@@ -17,5 +17,7 @@ $_SESSION["gender"]=$row[5];
 $_SESSION["address"]=$row[6];
 $_SESSION["dob"]=$row[7];
 $_SESSION["amount"]=$total[0];
+if(!isset($_SESSION['msg']))
+{$_SESSION['msg']="";}
 ?>
 
