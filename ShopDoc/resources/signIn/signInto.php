@@ -1,5 +1,5 @@
 <?php
-$con=mysqli_connect("Shopdoc","root","","shopdoc");
+$connect=mysqli_connect("Shopdoc","root","","shopdoc");
 
 
 $name=$_POST["name"];
@@ -13,7 +13,7 @@ $address=$_POST["ad1"]." -|- ".$_POST["ad2"]." -|- ".$_POST["city"]." -|- ".$_PO
 
 
 $insertQuery = "INSERT INTO entry_log (User_Name,Password,Age,Work,Gender,Address,DOB) VALUES ('$name','$pass','$age','$work','$gen','$address','$bday')";
-if(mysqli_query($con,$insertQuery)){
+if(mysqli_query($connect,$insertQuery)){
     header("Location: ../../index.html");
 }
 else{
