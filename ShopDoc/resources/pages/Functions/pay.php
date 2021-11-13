@@ -42,7 +42,7 @@ function pay($cost){
     $history=mysqli_query($con,"Insert into purchase_history (User_ID,Cost) values ('$user','$cost')");
     $storeExistingTemp=mysqli_query($con,"select * from cart_list WHERE User_ID='$user'");
     while($rowResult=mysqli_fetch_row($storeExistingTemp)){
-    $updateTempCount=mysqli_query($con,"Update product_details SET tempCount=0,Stock-='$rowResult[3]' WHERE Product_ID='$rowResult[2]'");}
+    $updateTempCount=mysqli_query($con,"Update product_details SET tempCount=0,Stock=Stock-'$rowResult[3]' WHERE Product_ID='$rowResult[2]'");}
     $get=mysqli_query($con,"delete FROM cart_list where User_ID='$user'");
     header("Refresh:1");
     }
