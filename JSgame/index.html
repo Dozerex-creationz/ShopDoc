@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Title</title>
+    <link rel="stylesheet" href="resources/text/style.css" />
+  </head>
+  <body class="centreFlex">
+    <div class="outerRoot">
+      <div id="root" class="">
+        <div class="game">
+          <div id="character" class=""></div>
+
+          <div id="obstacle" class=""></div>
+        </div>
+        <div class="question">
+          <form>
+            <p>Question?:</p>
+            <p>
+              <label for="right">
+                Right Answer->
+                <input type="radio" name="answer" value="right" />
+              </label>
+            </p>
+            <p>
+              <label for="wrong">
+                Wrong Answer->
+                <input type="radio" name="answer" value="wrong" />
+              </label>
+            </p>
+          </form>
+          <br />
+          <button class="check" onclick="check()">Check Answer</button>
+        </div>
+      </div>
+    </div>
+    <!-- <button onclick="change()">hi click</button> -->
+    <script src="resources/text/scripts.js"></script>
+  </body>
+</html>
