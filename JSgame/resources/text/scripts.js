@@ -2,6 +2,7 @@ var count=0;
 var speed=4;
 var jumpSpeed=0.8;
 var run=0;
+var start=0;
 const char=document.getElementById("character");
 const obs=document.getElementById("obstacle");
 function gameOver(){
@@ -70,5 +71,10 @@ function convertRemToPixels(rem) {
     return rem * parseFloat(getComputedStyle(document.documentElement).fontSize);
 }
 
-game();
-setInterval(gameOver,10);
+document.addEventListener("click",()=>{
+    if(start==0){
+        game();
+        setInterval(gameOver,10);
+        start=1;
+    }
+});
