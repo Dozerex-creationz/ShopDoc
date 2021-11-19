@@ -3,6 +3,8 @@ var speed=4;
 var jumpSpeed=0.8;
 var run=0;
 var start=0;
+var score=0;
+const scoreEle=document.getElementById("score");
 const char=document.getElementById("character");
 const obs=document.getElementById("obstacle");
 function gameOver(){
@@ -16,6 +18,10 @@ function gameOver(){
                 alert("Sorry!! Game Over!");
                 window.location.reload();
             }
+        }
+        else if(run==0){
+            score+=1;
+            scoreEle.innerHTML="Your score: "+score; 
         }
 }
 function game(){
