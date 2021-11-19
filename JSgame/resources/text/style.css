@@ -28,8 +28,7 @@
 }
 .instruction {
   position: fixed;
-  top: 1rem;
-  right: 50%;
+  bottom: 1rem;
   padding: 1rem;
   background: rgb(1, 102, 55);
   color: white;
