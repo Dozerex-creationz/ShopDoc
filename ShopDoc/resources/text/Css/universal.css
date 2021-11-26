@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css2?family=Special+Elite&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Arima+Madurai:wght@300&family=Josefin+Sans:wght@200&family=Teko&family=Titillium+Web&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Cabin+Sketch&display=swap");
 :root {
   --dark-color0: black;
   --light-color0: white;
@@ -69,6 +74,7 @@ header {
 header.theme-light,
 nav.theme-light,
 footer.theme-light {
+  transition: background 0.8s linear;
   background: var(--dark-color1);
   color: var(--light-color1);
 }
@@ -76,6 +82,7 @@ footer.theme-light {
 header .theme-dark,
 nav .theme-dark,
 footer .theme-dark {
+  transition: background 0.8s linear;
   background: var(--dark-color2);
   color: var(--light-color2);
 }
@@ -96,6 +103,7 @@ footer .theme-dark {
   border: none;
   font-size: 5rem;
   font-weight: bold;
+  font-family: "Teko", sans-serif;
   text-align: center;
   line-height: 15vh;
   color: var(--main-heading);
@@ -149,6 +157,7 @@ nav li a:hover i {
 }
 span.navtag {
   position: relative;
+  font-family: "Arima Madurai", cursive;
   /* add any properties if required for the navbars hidden content */
 }
 nav li a:hover span.hidden {
@@ -190,6 +199,7 @@ fieldset {
   display: flex;
   justify-content: space-around;
   flex-flow: column nowrap;
+  font-family: "Special Elite", cursive;
 }
 
 fieldset ul {
@@ -205,6 +215,7 @@ li a:hover {
   color: var(--dark-color2);
 }
 legend {
+  font-family: "Cabin Sketch", cursive;
   font-size: 1rem;
   animation: move 4s infinite linear both;
   background: var(--coolBlue);

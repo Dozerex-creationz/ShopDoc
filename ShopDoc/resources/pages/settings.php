@@ -30,17 +30,17 @@
 <main>
 <fieldset>
     <legend>Page settings:</legend>
-    <span class="setting"><em>Change the theme of the web-app:</em><button id="theme" style="float:right">Change theme</button></span>
+    <span class="setting">Change the theme of the web-app:<button id="theme" style="float:right">Change theme</button></span>
 </fieldset>
 <fieldset>
     <legend>Profile settings:</legend>
-    <span class="setting"><em>Delete the history of purchase:</em><button id="theme" style="float:right" onClick="window.location.assign('Functions/deleteOrderHistory.php')">Delete order history</button></span>
-    <span class="setting"><em>Empty your shopping cart:</em><button id="theme" style="float:right" onClick="window.location.assign('Functions/clearCart.php')">Empty cart</button></span>
-    <span class="setting"><em>Leave this profile:</em><button id="theme" style="float:right" onClick="window.location.assign('Functions/logOut.php')">Log Out</button></span>
+    <span class="setting">Delete the history of purchase:<button id="theme" style="float:right" onClick="window.location.assign('Functions/deleteOrderHistory.php')">Delete order history</button></span>
+    <span class="setting">Empty your shopping cart:<button id="theme" style="float:right" onClick="window.location.assign('Functions/clearCart.php')">Empty cart</button></span>
+    <span class="setting">Leave this profile:<button id="theme" style="float:right" onClick="window.location.assign('Functions/logOut.php')">Log Out</button></span>
     <?php
     $route='"Functions/admin.php"';
     if($_SESSION["userId"]=="1" or $_SESSION["userId"]=="2" or $_SESSION["userId"]=="3"){
-        echo "<span class='setting'><em>Explore Admin Privilages:</em><button id='theme' style='float:right' onClick='window.location.assign(".$route.")'>Admin Mode</button></span>";
+        echo "<span class='setting'>Explore Admin Privilages:<button id='theme' style='float:right' onClick='window.location.assign(".$route.")'>Admin Mode</button></span>";
     }?>
 </fieldset>
 

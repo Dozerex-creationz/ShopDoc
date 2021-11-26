@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Changa:wght@500&family=Karla:wght@300&family=Oxygen&display=swap");
 * {
   margin: 0px;
   padding: 0px;
@@ -18,6 +19,9 @@ h1 {
   text-align: center;
 }
 
+code {
+  font-family: "Oxygen", sans-serif;
+}
 div.fourPad {
   font-size: 1.2rem;
   display: grid;
@@ -30,6 +34,7 @@ div.fourPad {
   border: darkturquoise 3px solid;
   border-radius: 1em;
   padding: 1em;
+
   overflow: hidden;
 }
 .btnContainer {
@@ -47,6 +52,10 @@ div.fourPad {
   padding: 1rem;
   border: 2px solid rgb(0, 128, 122);
   border-radius: 5%;
+  font-family: "Karla", sans-serif;
+}
+button {
+  font-family: "Changa", sans-serif;
 }
 div.btns {
   width: 70vw;

@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Exo:wght@200&family=Lora:wght@600&family=M+PLUS+1&family=Rubik:wght@300&family=Tourney:wght@500&display=swap");
 .tabSwitch {
   width: 80vw;
   margin: auto;
@@ -10,6 +11,7 @@
   align-items: center;
   flex-direction: row nowrap;
   overflow-y: auto;
+  font-family: "M PLUS 1", sans-serif;
 }
 
 .tab {
@@ -72,6 +74,7 @@
   text-align: center;
   color: rgb(177, 135, 29);
   text-decoration: rgb(230, 136, 104);
+  font-family: "Tourney", cursive;
 }
 
 .item {
@@ -114,8 +117,11 @@
 .itemDesc h4 {
   color: rgb(170, 52, 52);
   font-size: 160%;
+  margin-top: 0.2rem;
+  font-family: "Comfortaa", cursive;
 }
 .itemDesc p {
+  font-family: "Rubik", sans-serif;
   padding: 1rem;
   text-align: left;
   color: rgb(117, 62, 40);
@@ -126,8 +132,9 @@
   place-items: center;
 }
 .changeItem {
+  font-family: "Exo", sans-serif;
   width: 3em;
-  height: 1.2em;
+  height: 1.4em;
   margin: auto;
   display: grid;
   grid-template-columns: 1fr 2fr 1fr;
@@ -144,7 +151,7 @@ button {
   text-align: center;
   background: rgb(196, 194, 194);
   line-height: normal;
-  border-radius: 13%;
+  border-radius: 3%;
 }
 
 .changeItem #add:hover,
@@ -175,5 +182,5 @@ button {
   text-align: center;
   line-height: 1.5em;
   background: rgb(192, 190, 190);
+  font-family: "Lora", serif;
 }
-
