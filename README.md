@@ -1,3 +1,6 @@
-# Dozerex-creationz.github.io
+# ShopDoc
 
-hosting repo for all my static websites i have created over time
+
+# Medicine supplies website
+
+a project done for establishing the knowledge acquired in HTML,CSS,JS n PHP
